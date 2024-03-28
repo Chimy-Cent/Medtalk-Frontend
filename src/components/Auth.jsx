@@ -27,7 +27,8 @@ const Auth = () => {
 
         const { username, password, phoneNumber, avatarURL } = form;
 
-        const URL = 'https://medtalk-backend.onrender.com//auth'; 
+        const URL = 'https://medtalk-backend.onrender.com/auth';
+        // const URL = 'https://medical-pager.herokuapp.com/auth';
 
         const { data: { token, userId, hashedPassword, fullName } } = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
             username, password, fullName: form.fullName, phoneNumber, avatarURL,
